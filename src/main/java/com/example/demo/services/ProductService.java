@@ -1,9 +1,7 @@
-package services;
+package com.example.demo.services;
 
-import models.Product;
-import org.springframework.web.bind.annotation.*;
+import com.example.demo.models.Product;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface ProductService {
@@ -12,4 +10,6 @@ public interface ProductService {
     Product createProduct(Product product);
     Product updateProduct(Long id,Product product);
     public void deleteProduct(Long id);
+    List<Product> getLimitedProduct(int limit);
+    List<Product> getSortedProduct(String sort);
 }
